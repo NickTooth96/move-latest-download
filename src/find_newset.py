@@ -15,7 +15,7 @@ for file in dir_list:
    print(file,type(file))
    if not os.path.isdir(os.path.join(downloads_path[system],file)):
       ct = os.path.getctime(os.path.join(downloads_path[system],file))
-      if ct < os.path.getctime(os.path.join(downloads_path[system],newest_download)) or newest_download == "":
+      if ct > os.path.getctime(os.path.join(downloads_path[system],newest_download)) or newest_download == "":
          newest_download = file
 
 print(newest_download)
