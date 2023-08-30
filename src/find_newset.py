@@ -5,8 +5,10 @@ dirpath = os.getcwd()
 system = platform.system()
 newest_download = ""
 
+print(">>>",os.path.expanduser('~'))
+
 downloads_path = {"Linux" : os.path.expanduser('~'), 
-                  "Windows": "'C:\'"}
+                  "Windows": os.path.expanduser('~')}
 
 dir_list = os.listdir(downloads_path[system])
 
