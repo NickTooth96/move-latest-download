@@ -1,18 +1,5 @@
-timestamp, file, operation, source directory, target directory
-1693428397.226901,shakram02.bash-beautify-0.1.1.vsix,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428432.276369,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428543.5829337,shakram02.bash-beautify-0.1.1.vsix,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428580.0245044,7z2301-x64.exe,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428617.0422397,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428678.9629865,shakram02.bash-beautify-0.1.1.vsix,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428763.5501344,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428923.1619165,shakram02.bash-beautify-0.1.1.vsix,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693428956.5627184,7z2301-x64.exe,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693429001.3956091,tinywow_change_bg_photo_32958339.png,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693446595.0027711,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693446764.4856339,shakram02.bash-beautify-0.1.1.vsix,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693446804.7002175,7z2301-x64.exe,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693446810.2592902,tinywow_change_bg_photo_32958339.png,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693446849.3526692,audiorelay-0.27.5.exe,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693447515.6396236,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
-1693447521.7231386,shakram02.bash-beautify-0.1.1.vsix,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
+timestamp,file,operation,source directory,target directory
+1693447995.7515688,audiorelay-0.27.5.exe,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
+1693447995.7666092,audiorelay-0.27.5.exe,undo move,C:\Users\nickt\projects\python\move-latest-download,C:\Users\nickt\Downloads
+1693448022.6288424,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
+1693448022.649236,Tag_Folder.bat,undo move,C:\Users\nickt\projects\python\move-latest-download,C:\Users\nickt\Downloads
