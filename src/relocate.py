@@ -9,12 +9,6 @@ def move(file,download_path,target_directory):
    save_history.log(file, "move", download_path, target_directory)
 
 def undo_last_move():
-   max_timestamp = 0.00
-   data = save_history.load()
-   print(type(data))
-   for row in data:
-      if max_timestamp > int(row['timestamp']):
-         max_timestamp = row['timestamp']
-   print(max_timestamp)
-   
-   # save_history.log(file, "undo_last_move", download_path, target_directory)
+   file = save_history.get_last_move()
+   shutil.move(os.path.join(file['target directory'],file['file']),os.path.join(file['source directory'],file['file']))
+   save_history.log(file['file'], "undo move", file['target directory'], file['source directory'])
