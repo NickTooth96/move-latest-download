@@ -1,4 +1,7 @@
 import platform
+import installers.windows_installer
 
 system = platform.system()
-print(system)
+
+# systems = {"Windows": installers.windows_installer.install(), "Linux": print('linux')}
+# systems[system]

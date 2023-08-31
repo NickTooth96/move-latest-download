@@ -1,0 +1,1 @@
+Set-Alias -Name hi -Value echo "Hello"

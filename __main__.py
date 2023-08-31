@@ -2,7 +2,6 @@ import os
 import src.download_path as download_path
 import src.most_recent as most_recent
 import src.relocate as relocate
-import src.save_history as save_history
 
 
 dp = download_path.find()

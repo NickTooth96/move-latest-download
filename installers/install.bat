@@ -1,0 +1,1 @@
+DOSKEY hi= echo "Hello, World!"
