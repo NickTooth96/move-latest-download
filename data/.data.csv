@@ -3,3 +3,5 @@ timestamp,file,operation,source directory,target directory
 1693447995.7666092,audiorelay-0.27.5.exe,undo move,C:\Users\nickt\projects\python\move-latest-download,C:\Users\nickt\Downloads
 1693448022.6288424,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
 1693448022.649236,Tag_Folder.bat,undo move,C:\Users\nickt\projects\python\move-latest-download,C:\Users\nickt\Downloads
+1693448225.5287366,Tag_Folder.bat,move,C:\Users\nickt\Downloads,C:\Users\nickt\projects\python\move-latest-download
+1693448225.553133,Tag_Folder.bat,undo move,C:\Users\nickt\projects\python\move-latest-download,C:\Users\nickt\Downloads
