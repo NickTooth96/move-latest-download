@@ -7,4 +7,4 @@ import src.relocate as relocate
 dp = download_path.find()
 mr = most_recent.find(dp)
 relocate.move(mr,dp,os.getcwd())
-relocate.undo_last_move()
+# relocate.undo_last_move()

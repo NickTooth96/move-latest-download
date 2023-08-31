@@ -3,7 +3,8 @@ import io
 import time
 import csv
 
-PATH = 'data/.data.csv'
+filepath = os.path.realpath(os.path.dirname(__file__))[:-4]
+PATH = os.path.join(filepath,'data','data.csv')
 
 def log(file, operation, download_path, current_working_directory):
     data = io.StringIO()
