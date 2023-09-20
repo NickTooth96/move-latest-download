@@ -74,4 +74,6 @@ timestamp,file,operation,source directory,target directory
 1695224600.5795643,lec11-IPC2.pdf,move,C:\Users\nickt\Downloads,C:\Users\nickt\TODAY
 1695224600.5800164,lec12-IPC3(1a).pdf,move,C:\Users\nickt\Downloads,C:\Users\nickt\TODAY
 1695224600.5807486,lec12-IPC3.pdf,move,C:\Users\nickt\Downloads,C:\Users\nickt\TODAY
-1695224615.73156,lec12-IPC3.pdf,undo move,C:\Users\nickt\TODAY,C:\Users\nickt\Downloads
+1695224615.73156,lec12-IPC3.pdf,undo move,C:\Users\nickt\TODAY,C:\Users\nickt\Downloads1695226741.3200731,Ch02-mdtd_class_Ga_F23.pdf,move,C:\Users\nickt\Downloads,C:\Users\nickt\OneDrive\School\se_317\slides
+1695226741.321072,Ch03-automation_JUnit.pdf,move,C:\Users\nickt\Downloads,C:\Users\nickt\OneDrive\School\se_317\slides
+1695226741.3218899,Ch_1_Ammann_G.pdf,move,C:\Users\nickt\Downloads,C:\Users\nickt\OneDrive\School\se_317\slides

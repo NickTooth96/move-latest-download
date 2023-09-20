@@ -2,6 +2,7 @@ import os
 import io
 import time
 import csv
+import datetime
 
 filepath = os.path.realpath(os.path.dirname(__file__))[:-4]
 PATH = os.path.join(filepath,'data','data.csv')
@@ -20,6 +21,25 @@ def log(file, operation, download_path, current_working_directory):
 
     with open(PATH,'a') as log:
         log.write(data.getvalue())
+
+def read():
+    data = load()
+    num = 1
+    for row in data:
+        date = str(datetime.datetime.fromtimestamp(float(row['timestamp']))).split(" ")[0]
+        if "Downloads" in row['source directory']:
+            src = "Downloads"
+        else:
+            src = row['source directory']
+
+        if "Downloads" in row['target directory']:
+            dst = "Downloads"
+        else:
+            dst = row['target directory']
+
+        file = row['file']
+        print(f"{str(num).rjust(3,'0')}) {date} | %.20s was moved from {src} to {dst}" % file)
+        num += 1
 
 def load():
     reader = csv.DictReader(open(PATH))
