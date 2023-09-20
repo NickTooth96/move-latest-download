@@ -26,6 +26,9 @@ def load():
     return reader
 
 def get_last_move():
+    #TODO fix issue when more than one file moved undo can move last 
+    # file back to downloads but then can't move other files 
+    # because get_last_move() finds the same file again and tries to move it to downloads again.
     max_timestamp = "0"
     data = load()
     file_info = {}

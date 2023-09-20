@@ -4,9 +4,10 @@ import src.save_history as save_history
 import csv
 
 
-def move(file,download_path,target_directory):
-   shutil.move(os.path.join(download_path,file), os.path.join(target_directory,file))
-   save_history.log(file, "move", download_path, target_directory)
+def move(newest,download_path,target_directory):
+   for file in newest:
+      shutil.move(os.path.join(download_path,file), os.path.join(target_directory,file))
+      save_history.log(file, "move", download_path, target_directory)
 
 def undo_last_move():
    file = save_history.get_last_move()
