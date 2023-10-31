@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import src.download_path as download_path
