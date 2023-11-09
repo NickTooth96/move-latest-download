@@ -1,2 +1,3 @@
 # move-latest-download
-Tool for moving most resent download to spesified directory 
+
+Tool for moving most recently downloaded file to specified directory (Working Directory)
