@@ -39,6 +39,8 @@ elif "--redo" in sys.argv:
     relocate.redo_previous(index)
   else:
     relocate.redo_previous()
+elif "--stat" in sys.argv:
+  save_history.stats()
 elif "--version" in sys.argv:
   print(NAME,VERSION)
 else:

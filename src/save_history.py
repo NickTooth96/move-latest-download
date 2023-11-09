@@ -64,4 +64,12 @@ def get_move_list():
                 max_timestamp = row['timestamp']
                 out_list.append(row)
     return out_list
+
+def stats():
+    data = load_list()
+    first_date = datetime.datetime.fromtimestamp(float(data[0]['timestamp'])).strftime("%m/%d/%Y")
+    last_used = datetime.datetime.fromtimestamp(float(data[len(data) - 1]['timestamp']))
+    diff = datetime.datetime.now() - last_used
+    output = f"You have used this tool {len(data)} times since {first_date}.\nYou moved a file {diff} ago!"
+    print(output)
     
