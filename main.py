@@ -7,11 +7,12 @@ import src.most_recent as most_recent
 import src.relocate as relocate
 import src.save_history as save_history
 
+VERSION = "1.2.1"
+NAME = "Move-Latest-Download"
 
 ERROR_msg =     f'\nMost recently downloaded file/files:\n\t{most_recent.find(download_path.find())}\nRetype command with "--one" to move <{most_recent.find(download_path.find())[0]}> or "--all" to move all listed files.\n'
 dp = download_path.find()
 mr = most_recent.find(dp)
-VERSION = "1.1.1"
 
 if "range" in sys.argv:
     mr = most_recent.find(dp)
@@ -36,5 +37,7 @@ elif "--redo" in sys.argv:
     relocate.redo_previous(index)
   else:
     relocate.redo_previous()
+elif "--version" in sys.argv:
+  print(NAME,VERSION)
 else:
   print(ERROR_msg)
