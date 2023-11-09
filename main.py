@@ -14,8 +14,7 @@ ERROR_msg =     f'\nMost recently downloaded file/files:\n\t{most_recent.find(do
 dp = download_path.find()
 mr = most_recent.find(dp)
 
-if "range" in sys.argv:
-    mr = most_recent.find(dp)
+if "args" in sys.argv:
     print(sys.argv)
    
 
@@ -33,7 +32,10 @@ elif "--history" in sys.argv:
   save_history.read()
 elif "--redo" in sys.argv:
   if sys.argv[sys.argv.index("--redo") + 1]:
-    index = int(sys.argv[sys.argv.index("--redo") + 1])
+    try:
+      index = int(sys.argv[sys.argv.index("--redo") + 1])
+    except:
+      index = int(input("Enter number of items to list: "))
     relocate.redo_previous(index)
   else:
     relocate.redo_previous()

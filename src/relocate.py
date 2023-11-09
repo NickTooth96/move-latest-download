@@ -48,9 +48,12 @@ def redo_previous(end_range=10):
       name = item['file']
       display = f"JOB {str(num).rjust(3,'0')}: {date} | %.20s -> {dst}" % name.ljust(20,' ')
       print(display)
-   user_command = int(input("Choose JOB to redo: "))
+
+   user_command = input("Choose JOB [Number] to redo\n[ENTER] to cancel: ")
+   if user_command != '':
+      if not os.path.exists(os.path.join(history[user_command]['target directory'],history[user_command]['file'])):
+         move([history[int(user_command)]['file']],history[int(user_command)]['source directory'],history[int(user_command)]['target directory'])
+      else:
+         print("ERROR: Invalid Operation")
+
    
-   if not os.path.exists(os.path.join(history[user_command]['target directory'],history[user_command]['file'])):
-      move([history[user_command]['file']],history[user_command]['source directory'],history[user_command]['target directory'])
-   else:
-      print("ERROR: Invalid Operation")
