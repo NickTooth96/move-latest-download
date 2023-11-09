@@ -14,6 +14,12 @@ ERROR_msg =     f'\nMost recently downloaded file/files:\n\t{most_recent.find(do
 dp = download_path.find()
 mr = most_recent.find(dp)
 
+
+def all(target):
+  dp = download_path.find()
+  mr = most_recent.find(dp)
+  relocate.move(mr,dp,target)
+  
 if "args" in sys.argv:
     print(sys.argv)
    

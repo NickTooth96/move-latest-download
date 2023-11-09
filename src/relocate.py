@@ -51,7 +51,7 @@ def redo_previous(end_range=10):
 
    user_command = input("Choose JOB [Number] to redo\n[ENTER] to cancel: ")
    if user_command != '':
-      if not os.path.exists(os.path.join(history[user_command]['target directory'],history[user_command]['file'])):
+      if not os.path.exists(os.path.join(history[int(user_command)]['target directory'],history[int(user_command)]['file'])):
          move([history[int(user_command)]['file']],history[int(user_command)]['source directory'],history[int(user_command)]['target directory'])
       else:
          print("ERROR: Invalid Operation")
