@@ -1,3 +1,4 @@
+import datetime
 import os
 import shutil
 import src.save_history as save_history
@@ -16,7 +17,7 @@ def move(newest,download_path,target_directory):
 
 def undo_last_move():
    success = False
-   file_list = save_history.get_last_move()
+   file_list = save_history.get_move_list()
 
    while not success:
       file = file_list.pop()
@@ -36,6 +37,20 @@ def undo_last_move():
          else:
             success = False
 
-def redo_previous(range=10):
-   print(range)
-   print("here")
+def redo_previous(end_range=10):
+   history = save_history.load_list()
+   for item in history[len(history) - end_range:len(history)]:
+      date = str(datetime.datetime.fromtimestamp(float(item['timestamp']))).split(" ")[0]
+      num = history.index(item)
+      dst = item['target directory']
+      if "Downloads" in dst:
+         dst = "Downloads"
+      name = item['file']
+      display = f"JOB {str(num).rjust(3,'0')}: {date} | %.20s -> {dst}" % name.ljust(20,' ')
+      print(display)
+   user_command = int(input("Choose JOB to redo: "))
+   
+   if not os.path.exists(os.path.join(history[user_command]['target directory'],history[user_command]['file'])):
+      move([history[user_command]['file']],history[user_command]['source directory'],history[user_command]['target directory'])
+   else:
+      print("ERROR: Invalid Operation")

@@ -30,6 +30,10 @@ elif "--undo" in sys.argv:
 elif "--history" in sys.argv:
   save_history.read()
 elif "--redo" in sys.argv:
-  relocate.redo_previous()
+  if sys.argv[sys.argv.index("--redo") + 1]:
+    index = int(sys.argv[sys.argv.index("--redo") + 1])
+    relocate.redo_previous(index)
+  else:
+    relocate.redo_previous()
 else:
   print(ERROR_msg)
