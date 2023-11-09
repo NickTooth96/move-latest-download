@@ -22,7 +22,9 @@ if "--find" in sys.argv:
 elif "--all" in sys.argv:
   relocate.move(mr,dp,os.getcwd())
 elif "--one" in sys.argv:
-  relocate.move(mr[0],dp,os.getcwd())
+  file = []
+  file.append(mr[0])
+  relocate.move(file,dp,os.getcwd())
 elif "--undo" in sys.argv:
   relocate.undo_last_move()
 elif "--history" in sys.argv:
