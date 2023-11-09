@@ -35,3 +35,7 @@ def undo_last_move():
             break
          else:
             success = False
+
+def redo_previous(range=10):
+   print(range)
+   print("here")

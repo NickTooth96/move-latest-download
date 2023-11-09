@@ -29,5 +29,7 @@ elif "--undo" in sys.argv:
   relocate.undo_last_move()
 elif "--history" in sys.argv:
   save_history.read()
+elif "--redo" in sys.argv:
+  relocate.redo_previous()
 else:
   print(ERROR_msg)
