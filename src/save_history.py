@@ -6,6 +6,7 @@ import datetime
 
 filepath = os.path.realpath(os.path.dirname(__file__))[:-4]
 PATH = os.path.join(filepath,'data','data.csv')
+DATA_ERROR_MSG = "Data file not found in" + PATH + "\nCreate file [Y/n] "
 
 def log(file, operation, download_path, current_working_directory):
     data = io.StringIO()
@@ -42,7 +43,12 @@ def read():
         num += 1
 
 def load():
-    reader = csv.DictReader(open(PATH))
+    try:
+        reader = csv.DictReader(open(PATH))
+    except:
+        ans = input(DATA_ERROR_MSG)
+        if ans in ["Y","y"]:
+            create_data_file()
     return reader
 
 def load_list():
@@ -64,4 +70,11 @@ def get_move_list():
                 max_timestamp = row['timestamp']
                 out_list.append(row)
     return out_list
+
+def create_data_file():
+    print(filepath)
+    os.mkdir(os.path.join(filepath, 'data'))
+    # os.makedirs(os.path.dirname(os.path.join(filepath, 'data')), exist_ok=True)
+    with open(PATH,'x') as file:
+        file.write('timestamp,file,operation,source directory,target directory\n')
     
