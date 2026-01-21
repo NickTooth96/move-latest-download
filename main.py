@@ -59,9 +59,9 @@ def main(argv=None):
     relocate.move(file, dp, os.getcwd())
 
   if args.undo:
-    save_history.undo(dp)
+    relocate.undo_last_move()
   if args.redo:
-    save_history.redo(dp)
+    relocate.redo_previous()
 
     
 
