@@ -15,4 +15,7 @@ log-path = ""
 [project.scripts]
 mvld = "main:main"
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
 
