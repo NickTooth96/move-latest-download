@@ -1,4 +1,5 @@
 import os
+import sys
 import io
 import time
 import csv
@@ -20,8 +21,11 @@ def log(file, operation, download_path, current_working_directory):
     data.write(current_working_directory)
     data.write("\n")
 
-    with open(PATH,'a') as log:
-        log.write(data.getvalue())
+    try:
+        with open(PATH,'a') as log:
+            log.write(data.getvalue())
+    except Exception as e:
+        print(f"Error writing to log file: {e}")
 
 def read():
     data = load()
@@ -49,6 +53,9 @@ def load():
         ans = input(DATA_ERROR_MSG)
         if ans in ["Y","y"]:
             create_data_file()
+        else:
+            print("Data file not created. Exiting.")
+            sys.exit()
     return reader
 
 def load_list():
@@ -77,4 +84,3 @@ def create_data_file():
     # os.makedirs(os.path.dirname(os.path.join(filepath, 'data')), exist_ok=True)
     with open(PATH,'x') as file:
         file.write('timestamp,file,operation,source directory,target directory\n')
-    
