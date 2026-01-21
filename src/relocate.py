@@ -12,6 +12,7 @@ DISAPPROVE = ['No','no','N','n']
 def move(newest,download_path,target_directory):
    if not check.duplicate(newest,target_directory):
       for file in newest:
+         print(f"Moving {file} to {target_directory}")
          shutil.move(os.path.join(download_path,file), os.path.join(target_directory,file))
          save_history.log(file, "move", download_path, target_directory)
 
@@ -20,7 +21,11 @@ def undo_last_move():
    file_list = save_history.get_move_list()
 
    while not success:
-      file = file_list.pop()
+      try:
+         file = file_list.pop()
+      except IndexError:
+         print("No more moves to undo.")
+         break
 
       if os.path.exists(os.path.join(file['target directory'],file['file'])):         
          user_command = input(f"Move {file['file']} back to {file['source directory']}?\n[Y/n] ")
