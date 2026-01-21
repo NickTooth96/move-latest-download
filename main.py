@@ -61,6 +61,7 @@ def main(argv=None):
   if args.undo:
     relocate.undo_last_move()
   if args.redo:
+    ## TODO: implement redo multiple jobs
     relocate.redo_previous()
 
     
