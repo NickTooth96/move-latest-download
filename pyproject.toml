@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "move-latest-download"
+version = "1.2.0"
+description = "Finds the most recently downloaded file/files and moves them to a specified location."
+authors = [ { name = "Nicholas Toothaker" } ]
+requires-python = ">=3.8"
+
+[logging]
+log-path = ""
+
+[project.scripts]
+mvld = "main:main"
+
+
